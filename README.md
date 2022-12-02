@@ -22,7 +22,7 @@ The Xeon Phi works in all the slots it fits in as long as â€œAbove 4G Decodingâ€
 
 ## Getting Started
 
-When the 5110p came out using it with Windows was the <a href=https://www.pugetsystems.com/labs/hpc/Windows-10-with-Xeon-Phi-733/>worse options</a>. Now things are different and Windows 7/10 is really the best option. The driver package (and assorted utilities) for Xeon Phi is called MPSS. You can still get it from Intel's website <a href=https://www.intel.com/content/www/us/en/developer/articles/tool/manycore-platform-software-stack-mpss.html>here</a>. You'll also need an old (version 14.2 works) Intel OpenCL runtime if you want to use OpenCL.
+When the 5110p came out using it with Windows was the <a href=https://www.pugetsystems.com/labs/hpc/Windows-10-with-Xeon-Phi-733/>worst option</a>. Now things are different and Windows 7/10 is really the best option, as getting really old RHEL or openSUSE working is a huge pain. The driver package (and assorted utilities) for Xeon Phi is called MPSS. You can still get it from Intel's website <a href=https://www.intel.com/content/www/us/en/developer/articles/tool/manycore-platform-software-stack-mpss.html>here</a>. You'll also need an old (version 14.2 works) Intel OpenCL runtime if you want to use OpenCL.
 
 It's important to remember that a Xeon Phi coprocessor is pretty much it's own computer. This means you'll want to SSH into it. The IP address can be viewed/changed at C:\Program Files\Intel\MPSS\mic0.xml, assuming you have one Xeon Phi and installed to the default location.
 

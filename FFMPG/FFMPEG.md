@@ -10,13 +10,13 @@ First step is to follow the ffmpeg guide until you get to the NASM heading.
 ## NASM
 This is not actually needed for compiling to k1om, or anything else really. Some libraries use it to optimize performance sensitive code for x86.
 
-That being said you can totally still compile NASM for k1om. I followed the directions exactly, except for using the following instead of the usual ./configure command.
+That being said you can totally compile NASM for k1om anyways. I followed the directions exactly, except for using the following instead of the usual ./configure command.
 
 ```
 PATH="$HOME/bin:$PATH" CC=k1om-mpss-linux-gcc ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" --host=k1om
 ```
 
-"--host=k1om" tells the build script that we're compiling for k1om. This option only sometimes works on ./configure scripts as they are not standardized. ./configure even finds the compiler command automatically.
+"--host=k1om" tells the build script that we're compiling for k1om. This option only sometimes works on ./configure scripts as they are not standardized. ./configure even finds the compiler automatically.
 
 If everything runs properly you should get `nasm` and `ndiasm` executables in the ~/bin/ folder created during the initial setup. Hopefully they fail to run on the host machine (expect `Exec format error`). If they do run something is wrong with the compiler setup and the makefile is using the standard gcc install.
 
